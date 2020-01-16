@@ -1,4 +1,5 @@
 # Uncomment the next line to define a global platform for your project
+# App runs when only DJI-SDK-iOS pod is installed. Will uncomment other two when working.
 platform :ios, '13.0'
 
 target 'SAR_iOS' do
