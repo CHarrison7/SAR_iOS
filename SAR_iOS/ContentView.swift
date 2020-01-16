@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  SAR_iOS
 //
-//  Created by Caleb Harrison on 1/16/20.
+//  Created by Caleb Harrison, Travis Tomer, Son Doan, and Larry Lu on 1/16/20.
 //  Copyright © 2020 Caleb Harrison. All rights reserved.
 //
 
