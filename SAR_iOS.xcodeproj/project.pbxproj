@@ -15,6 +15,7 @@
 		3C49D3FE23D0CA390007A4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C49D3FC23D0CA390007A4C0 /* LaunchScreen.storyboard */; };
 		3C49D40923D0CA390007A4C0 /* SAR_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C49D40823D0CA390007A4C0 /* SAR_iOSTests.swift */; };
 		3C49D41423D0CA390007A4C0 /* SAR_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C49D41323D0CA390007A4C0 /* SAR_iOSUITests.swift */; };
+		779961E9697B23323696D1C7 /* libPods-SAR_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7284275D8CA3A75D4FA4FC /* libPods-SAR_iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189327711D6F1E0D5021C413 /* Pods-SAR_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAR_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SAR_iOS/Pods-SAR_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3C49D3EE23D0CA380007A4C0 /* SAR_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAR_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C49D3F123D0CA380007A4C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C49D3F323D0CA380007A4C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		3C49D40F23D0CA390007A4C0 /* SAR_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAR_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C49D41323D0CA390007A4C0 /* SAR_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAR_iOSUITests.swift; sourceTree = "<group>"; };
 		3C49D41523D0CA390007A4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FBB86D32DA7EE578B86237A /* Pods-SAR_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAR_iOS.release.xcconfig"; path = "Target Support Files/Pods-SAR_iOS/Pods-SAR_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		FE7284275D8CA3A75D4FA4FC /* libPods-SAR_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SAR_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779961E9697B23323696D1C7 /* libPods-SAR_iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				3C49D40723D0CA390007A4C0 /* SAR_iOSTests */,
 				3C49D41223D0CA390007A4C0 /* SAR_iOSUITests */,
 				3C49D3EF23D0CA380007A4C0 /* Products */,
+				443421C2A450C0B889405B79 /* Pods */,
+				EF11748DD39B9DDF1886B01C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +143,24 @@
 			path = SAR_iOSUITests;
 			sourceTree = "<group>";
 		};
+		443421C2A450C0B889405B79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				189327711D6F1E0D5021C413 /* Pods-SAR_iOS.debug.xcconfig */,
+				5FBB86D32DA7EE578B86237A /* Pods-SAR_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF11748DD39B9DDF1886B01C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE7284275D8CA3A75D4FA4FC /* libPods-SAR_iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C49D41823D0CA390007A4C0 /* Build configuration list for PBXNativeTarget "SAR_iOS" */;
 			buildPhases = (
+				8CE16E8A89E576681EEA5DF2 /* [CP] Check Pods Manifest.lock */,
 				3C49D3EA23D0CA380007A4C0 /* Sources */,
 				3C49D3EB23D0CA380007A4C0 /* Frameworks */,
 				3C49D3EC23D0CA380007A4C0 /* Resources */,
+				5F09199006C0CCCE480E053F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +288,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F09199006C0CCCE480E053F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAR_iOS/Pods-SAR_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAR_iOS/Pods-SAR_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SAR_iOS/Pods-SAR_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CE16E8A89E576681EEA5DF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SAR_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C49D3EA23D0CA380007A4C0 /* Sources */ = {
@@ -432,6 +501,7 @@
 		};
 		3C49D41923D0CA390007A4C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 189327711D6F1E0D5021C413 /* Pods-SAR_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +521,7 @@
 		};
 		3C49D41A23D0CA390007A4C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FBB86D32DA7EE578B86237A /* Pods-SAR_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
