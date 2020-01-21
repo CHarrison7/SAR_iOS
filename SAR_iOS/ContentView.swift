@@ -7,14 +7,48 @@
 //
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        Text("Label")
+        VStack(alignment: .leading) {
+            Text("Login to DJI SDK")
+                .font(.title)
+                .bold()
+            HStack {
+                Button(action: {
+                    // What to perform
+                    print("Logon success!")
+                }) {
+                    // How the button looks like
+                    Text("Login")
+                        .font(.title)
+                        .bold()
+                        .padding()
+                }
+                
+                Button(action: {
+                    // What to perform
+                    print("Logout success!")
+                }) {
+                    // How the button looks like
+                    Text("Logoff")
+                        .font(.title)
+                        .padding()
+                    
+                        
+                }
+            }
+        }
+        .padding()
+
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
