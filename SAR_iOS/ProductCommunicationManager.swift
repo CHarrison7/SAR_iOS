@@ -23,6 +23,7 @@ class ProductCommunicationManager: NSObject {
             NSLog("Please enter your app key in the info.plist")
             return
         }
+    
         
         DJISDKManager.registerApp(with: self)
     }
