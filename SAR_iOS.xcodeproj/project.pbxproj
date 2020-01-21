@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		3C49D3FE23D0CA390007A4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C49D3FC23D0CA390007A4C0 /* LaunchScreen.storyboard */; };
 		3C49D40923D0CA390007A4C0 /* SAR_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C49D40823D0CA390007A4C0 /* SAR_iOSTests.swift */; };
 		3C49D41423D0CA390007A4C0 /* SAR_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C49D41323D0CA390007A4C0 /* SAR_iOSUITests.swift */; };
+		63D2397A23D25AFC005E7056 /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D2397923D25AFC005E7056 /* StartUpViewController.swift */; };
+		63D2397C23D25B77005E7056 /* ProductCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D2397B23D25B77005E7056 /* ProductCommunicationManager.swift */; };
 		94B70AB0B238BC6D4A80C985 /* Pods_SAR_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F7F59884C5DF53EE54FE09 /* Pods_SAR_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		3C49D41323D0CA390007A4C0 /* SAR_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAR_iOSUITests.swift; sourceTree = "<group>"; };
 		3C49D41523D0CA390007A4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FBB86D32DA7EE578B86237A /* Pods-SAR_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAR_iOS.release.xcconfig"; path = "Target Support Files/Pods-SAR_iOS/Pods-SAR_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		63D2397923D25AFC005E7056 /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
+		63D2397B23D25B77005E7056 /* ProductCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCommunicationManager.swift; sourceTree = "<group>"; };
 		A8F7F59884C5DF53EE54FE09 /* Pods_SAR_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAR_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,8 @@
 		3C49D3F023D0CA380007A4C0 /* SAR_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				63D2397923D25AFC005E7056 /* StartUpViewController.swift */,
+				63D2397B23D25B77005E7056 /* ProductCommunicationManager.swift */,
 				3C49D3F123D0CA380007A4C0 /* AppDelegate.swift */,
 				3C49D3F323D0CA380007A4C0 /* SceneDelegate.swift */,
 				3C49D3F523D0CA380007A4C0 /* ContentView.swift */,
@@ -149,7 +155,6 @@
 				189327711D6F1E0D5021C413 /* Pods-SAR_iOS.debug.xcconfig */,
 				5FBB86D32DA7EE578B86237A /* Pods-SAR_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -354,6 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D2397C23D25B77005E7056 /* ProductCommunicationManager.swift in Sources */,
+				63D2397A23D25AFC005E7056 /* StartUpViewController.swift in Sources */,
 				3C49D3F223D0CA380007A4C0 /* AppDelegate.swift in Sources */,
 				3C49D3F423D0CA380007A4C0 /* SceneDelegate.swift in Sources */,
 				3C49D3F623D0CA380007A4C0 /* ContentView.swift in Sources */,

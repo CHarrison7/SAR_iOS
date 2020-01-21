@@ -5,7 +5,6 @@
 //  Created by Caleb Harrison, Travis Tomer, Son Doan, and Larry Lu on 1/16/20.
 //  Copyright © 2020 Caleb Harrison. All rights reserved.
 //
-
 import SwiftUI
 
 struct ContentView: View {
