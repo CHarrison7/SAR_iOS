@@ -6,7 +6,7 @@
 //  Copyright © 2020 Caleb Harrison. All rights reserved.
 //
 import SwiftUI
-
+import Pods_SAR_iOS
 
 struct ContentView: View {
     var body: some View {
@@ -15,16 +15,22 @@ struct ContentView: View {
                 .font(.title)
                 .bold()
             HStack {
-                Button(action: {
-                    // What to perform
-                    print("Logon success!")
-                }) {
-                    // How the button looks like
-                    Text("Login")
-                        .font(.title)
-                        .bold()
-                        .padding()
-                }
+                    Button(action: {
+                        // What to perform
+                        print("Logon success!")
+                        
+                        //TEST OF CALLING FUNCTIONS FROM OUR OWN CODE
+                        //HAVE TO SET VAR = CLASS TYPE THEN USE DOT OPERATOR
+                        let loginTestString = ProductCommunicationManager()
+                        loginTestString.djiLogonInitiated()
+                        
+                    }) {
+                        // How the button looks like
+                        Text("Login")
+                            .font(.title)
+                            .bold()
+                            .padding()
+                    }
                 
                 Button(action: {
                     // What to perform
@@ -40,7 +46,6 @@ struct ContentView: View {
             }
         }
         .padding()
-
     }
 }
 

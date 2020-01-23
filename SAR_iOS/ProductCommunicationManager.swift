@@ -43,11 +43,11 @@ extension ProductCommunicationManager : DJISDKManagerDelegate {
     }
     
     func productConnected(_ product: DJIBaseProduct?) {
-        
+        print("Product conencted!")
     }
     
     func productDisconnected() {
-        
+        print("Product disconencted!")
     }
     
     func didUpdateDatabaseDownloadProgress(_ progress: Progress) {
@@ -58,6 +58,11 @@ extension ProductCommunicationManager : DJISDKManagerDelegate {
     func componentConnected(withKey key: String?, andIndex index: Int) {
         
     }
+    
+    func djiLogonInitiated() {
+        NSLog("Login to DJI User Account Initiated.\n")
+    }
+
     
     func componentDisconnected(withKey key: String?, andIndex index: Int) {
         
