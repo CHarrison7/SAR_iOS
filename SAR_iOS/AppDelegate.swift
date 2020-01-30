@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import Pods_SAR_iOS
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
 
+    var productCommunicationManager = ProductCommunicationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.productCommunicationManager.registerWithSDK()
         return true
     }
 
