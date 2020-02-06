@@ -11,11 +11,10 @@ import SwiftUI
 struct MotherView: View {
     
     // Get user logged on name
-    let user = UserAccountManager()
+    let user = UserAccountManager().getUserLoginName()
     
     init() {
-        user.getUserLoginName()
-        NSLog("USER = \(user)")
+        NSLog("USER from MotherView = \(String(describing: user))")
     }
     // State can be userLoggedIn or userLoggedOut
     // Will be used to determine which view (login screen or DJI Map App) is shown

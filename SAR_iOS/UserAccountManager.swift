@@ -16,17 +16,17 @@ class UserAccountManager: NSObject {
         let user = DJIUserAccountManager()
         
         var userName = user.loggedInDJIUserAccountName
-        
-        print("Current user is: \(String(describing: userName))")
-        NSLog("Current user is: \(String(describing: userName))")
     
         if (userName == nil) {
-            userName = "NIL"
+            userName = "No user logged in"
         } else {
-            userName = "MY FUNCTION WORKS BITCHES!"
+            userName = "User logged in"
         }
-    }
-}
+        
+        NSLog("Current user is: \(userName)")
+        
+    } // End of getuserLoginStatus func
+} // End of UserAccountManager class
 
 
 
