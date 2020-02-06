@@ -39,8 +39,8 @@ extension ProductCommunicationManager : DJISDKManagerDelegate {
         } else {
             DJISDKManager.startConnectionToProduct()
         }
-        
     }
+
     
     func productConnected(_ product: DJIBaseProduct?) {
         print("Product conencted!")

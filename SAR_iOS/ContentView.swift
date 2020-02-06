@@ -6,7 +6,7 @@
 //  Copyright © 2020 Caleb Harrison. All rights reserved.
 //
 import SwiftUI
-import Pods_SAR_iOS
+
 
 struct ContentView: View {
     var body: some View {

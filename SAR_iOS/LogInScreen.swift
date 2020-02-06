@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import DJIUXSDK
 
 struct LogInScreen: View {
     var body: some View {
