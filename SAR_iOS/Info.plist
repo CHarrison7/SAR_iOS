@@ -19,7 +19,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>DJISDKAppKey</key>
-	<string>677e5d8fcce5af25afc490f1</string>
+	<string>e1001e9b7a673ee12b8adb4e</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -56,6 +56,8 @@
 		<string>com.dji.protocol</string>
 		<string>com.dji.common</string>
 	</array>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>bluetooth-always-usage description</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

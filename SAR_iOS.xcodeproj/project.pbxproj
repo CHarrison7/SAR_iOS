@@ -543,13 +543,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SAR_iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = YZWD7H2JBY;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				HEADER_SEARCH_PATHS = "\"$(PODS_ROOT)/Headers/Public\"/**";
 				INFOPLIST_FILE = SAR_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CHarrison7.SAR-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CHarrison7.SAR-iOS0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -563,13 +566,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SAR_iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = YZWD7H2JBY;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				HEADER_SEARCH_PATHS = "\"$(PODS_ROOT)/Headers/Public\"/**";
 				INFOPLIST_FILE = SAR_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CHarrison7.SAR-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CHarrison7.SAR-iOS0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
