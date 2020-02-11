@@ -8,30 +8,11 @@
 
 import SwiftUI
 
+let djiView = DJIView()
+
 struct MotherView: View {
-    
-    // Get user logged on name
-    let user = UserAccountManager().getUserLoginName()
-    
-    init() {
-        NSLog("USER from MotherView = \(String(describing: user))")
-    }
-    // State can be userLoggedIn or userLoggedOut
-    // Will be used to determine which view (login screen or DJI Map App) is shown
-    // NEED TO DO: Determine how to store the user login status and use it to set this state.
-    
-    @State var page = "userLoggedIn"
-    
     var body: some View {
-        VStack {
-            if page == "userLoggedIn" {
-                // Display Login screen
-                LogInScreen()
-            } else if page == "userLoggedOut" {
-                // Display Main screen (DJI MAP APP)
-                MainApp()
-            }
-        }
+        Text("hello")
     }
 }
 

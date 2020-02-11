@@ -1,70 +1,81 @@
-//
-//  ProductCommunicationManager.swift
-//  SDK Swift Sample
-//
-//  Created by Arnaud Thiercelin on 3/22/17.
-//  Copyright © 2017 DJI. All rights reserved.
-//
 import UIKit
 import DJISDK
 
-class ProductCommunicationManager: NSObject {
+let ProductCommunicationManagerStateDidChange = "ProductCommunicationManagerStateDidChange"
 
-    // Set this value to true to use the app with the Bridge and false to connect directly to the product
-    let enableBridgeMode = false
-    
-    // When enableBridgeMode is set to true, set this value to the IP of your bridge app.
-    let bridgeAppIP = "10.81.55.116"
-    
-    func registerWithSDK() {
-        let appKey = Bundle.main.object(forInfoDictionaryKey: SDK_APP_KEY_INFO_PLIST_KEY) as? String
+class ProductCommunicationManager: NSObject, DJISDKManagerDelegate {
+    func didUpdateDatabaseDownloadProgress(_ progress: Progress) {
         
+    }
+    
+    open weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    open var connectedProduct: DJIBaseProduct!
+    
+    var registered = false
+    var connected = false
+    
+    open func connectToProduct() {
+        if useBridge {
+            NSLog("Connecting to Product using debug IP address: \(debugIP)...")
+            DJISDKManager.enableBridgeMode(withBridgeAppIP: debugIP)
+        } else {
+            NSLog("Connecting to product...")
+            let startedResult = DJISDKManager.startConnectionToProduct()
+            
+            if startedResult {
+                NSLog("Connecting to product started successfully!")
+            } else {
+                NSLog("Connecting to product failed to start!")
+            }
+        }
+    }
+    
+    func registerWithProduct() {
+        let appKey = Bundle.main.object(forInfoDictionaryKey: SDK_APP_KEY_INFO_PLIST_KEY) as? String
+
         guard appKey != nil && appKey!.isEmpty == false else {
             NSLog("Please enter your app key in the info.plist")
             return
         }
         
-        DJISDKManager.registerApp(with: self)
-    }
-    
-}
-
-extension ProductCommunicationManager : DJISDKManagerDelegate {
-    func appRegisteredWithError(_ error: Error?) {
-        
-        NSLog("SDK Registered with error \(error?.localizedDescription)")
-        
-        if enableBridgeMode {
-            DJISDKManager.enableBridgeMode(withBridgeAppIP: bridgeAppIP)
-        } else {
-            DJISDKManager.startConnectionToProduct()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            NSLog("Registering Product with registration ID: \(appKey)")
+            DJISDKManager.registerApp(with: self)
         }
     }
-
+    
+    //MARK: - DJISDKManagerDelegate
+    func appRegisteredWithError(_ error: Error?) {
+        if useBridge {
+            if error == nil {
+                self.registered = true
+                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: ProductCommunicationManagerStateDidChange)))
+            }
+            self.connectToProduct()
+        } else {
+            if error != nil {
+                NSLog("Error Registrating App: \(String(describing: error))")
+            } else {
+                self.registered = true
+                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: ProductCommunicationManagerStateDidChange)))
+                NSLog("Registration Succeeded")
+                self.connectToProduct()
+            }
+        }
+    }
     
     func productConnected(_ product: DJIBaseProduct?) {
-        print("Product conencted!")
+        if product != nil {
+            self.connected = true
+            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: ProductCommunicationManagerStateDidChange)))
+            NSLog("Connection to new product succeeded!")
+            self.connectedProduct = product
+        }
     }
     
     func productDisconnected() {
-        print("Product disconencted!")
-    }
-    
-    func didUpdateDatabaseDownloadProgress(_ progress: Progress) {
-        NSLog("Download database : \n%lld/%lld" + String(progress.completedUnitCount), progress.totalUnitCount)
-    }
-    
-    
-    func componentConnected(withKey key: String?, andIndex index: Int) {
-        
-    }
-    
-    func djiLogonInitiated() {
-        NSLog("Login to DJI User Account Initiated.\n")
-    }
-
-    
-    func componentDisconnected(withKey key: String?, andIndex index: Int) {
-        
+        self.connected = false
+        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: ProductCommunicationManagerStateDidChange)))
+        NSLog("Disconnected from product!");
     }
 }
